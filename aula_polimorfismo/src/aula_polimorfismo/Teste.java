@@ -16,6 +16,7 @@ public class Teste {
 				empregados.add(new EmpregadoTipo1 (tipo));
 				double salario = 1500 + gerador.nextDouble() * 3500;
 				empregados.get(i).setSalario(salario);
+				empregados.get(i).setValorAReceber();
 			}
 			else if(tipo == 2) {
 				empregados.add(new EmpregadoTipo2 (tipo));
@@ -23,6 +24,7 @@ public class Teste {
 				double percentualComissao = gerador.nextDouble();
 				empregados.get(i).setSalario(salario);
 				empregados.get(i).setPercentualComissao(percentualComissao);
+				empregados.get(i).setValorAReceber();
 			}
 			else if(tipo == 3) {
 				empregados.add(new EmpregadoTipo3 (tipo));
@@ -32,19 +34,20 @@ public class Teste {
 				empregados.get(i).setSalario(salario);
 				empregados.get(i).setPercentualComissao(percentualComissao);
 				empregados.get(i).setBonus(bonus);
+				empregados.get(i).setValorAReceber();
 			}
 			else {
 				empregados.add(new EmpregadoTipo4 (tipo));
 				double bonus = 2000 + gerador.nextDouble() * 2500;
 				empregados.get(i).setBonus(bonus);
+				empregados.get(i).setValorAReceber();
 			}
 		}
 		
 		//Trecho 2 - Listagem 4
 		for (Empregado e: empregados) {
 			System.out.println("Tipo do empregado: " + e.getTipo());
-			System.out.println("Salario a receber: ");
-			System.out.println(e);
+			System.out.println(String.format("Valor a receber: %.2f", e.getValorAReceber()));
 		}
 	}
 }

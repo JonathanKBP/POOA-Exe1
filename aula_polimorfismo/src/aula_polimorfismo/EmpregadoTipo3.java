@@ -14,10 +14,11 @@ public class EmpregadoTipo3 extends Empregado {
 		this.bonus = bonus;
 	}
 
-	
-	public String toString() {
-		return String.format("%.2f", salario + salario + percentualComissao + bonus);
+	public double getValorAReceber() {		
+		return valorAReceber;
+	}
+	public void setValorAReceber() {
+		this.valorAReceber = salario + salario + percentualComissao + bonus;
 	}
 	
-
 }

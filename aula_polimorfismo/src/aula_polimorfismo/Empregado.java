@@ -5,6 +5,7 @@ public class Empregado {
 	protected double salario;
 	protected double percentualComissao;
 	protected double bonus;
+	protected double valorAReceber;
 	
 	public Empregado () {
 		
@@ -45,7 +46,13 @@ public class Empregado {
 	public void setBonus(double bonus) {
 		this.bonus = bonus;
 	}
-
+	
+	public double getValorAReceber() {
+		return valorAReceber;
+	}
+	public void setValorAReceber() {
+		this.valorAReceber = valorAReceber;
+	}
 	
 }
 	

@@ -1,7 +1,6 @@
 package aula_polimorfismo;
 
 public class EmpregadoTipo1 extends Empregado {
-	
 	public EmpregadoTipo1 () {
 		
 	}
@@ -11,9 +10,12 @@ public class EmpregadoTipo1 extends Empregado {
 	public EmpregadoTipo1(int tipo, double salario) {
 		this.salario = salario;
 	}
-
-	public String toString() {
-		return String.format("%.2f", salario);
+	
+	public double getValorAReceber() {		
+		return valorAReceber;
+	}
+	public void setValorAReceber() {
+		this.valorAReceber = salario;
 	}
 
 }

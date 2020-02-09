@@ -14,9 +14,13 @@ public class EmpregadoTipo2 extends Empregado {
 		this.salario = salario;
 		this.percentualComissao = percentualComissao;
 	}
-
-	public String toString() {
-		return String.format("%.2f", salario + salario * percentualComissao);
+	
+	public double getValorAReceber() {		
+		return valorAReceber;
 	}
+	public void setValorAReceber() {
+		this.valorAReceber = salario + salario + percentualComissao;
+	}
+
 
 }

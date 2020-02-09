@@ -13,7 +13,11 @@ public class EmpregadoTipo4 extends Empregado {
 		this.bonus = bonus;
 	}
 
-	public String toString() {
-		return String.format("%.2f", bonus);
+	public double getValorAReceber() {		
+		return valorAReceber;
 	}
+	public void setValorAReceber() {
+		this.valorAReceber = bonus;
+	}
+
 }
